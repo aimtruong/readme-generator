@@ -1,13 +1,8 @@
 
-// create readMe template
-const generatePage = (proTitle, proDes) => {
-    //const { } = TemplateData;
-    
-    return `
-# ${proTitle}
+# README
 
 ## Description
-    ${proDes}
+    a read me file
 
 
 ## Table of Contents
@@ -47,7 +42,4 @@ const generatePage = (proTitle, proDes) => {
 >
 >Email me at email}(https://google.com) if you have any additional questions!
 
-    `
-}
-
-module.exports = generatePage;
+    

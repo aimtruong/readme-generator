@@ -1,7 +1,7 @@
 // packages needed
 const inquirer = require("inquirer");
-const writeFile = require("fs");
-//const generatePage = require("./src/page-template.js");
+const fs = require("fs");
+const generatePage = require("./src/page-template.js");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -13,8 +13,23 @@ const questions = [
     "Write instructions on how to do a test (Required)"
 ];
 
+const profileDataArgs = process.argv.slice(2);
+
+const[ proTitle, proDes ] = profileDataArgs;
+
+const pageREADME = generatePage(proTitle, proDes);
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, TemplateData) {
+fs.writeFile('README.md', pageREADME, (err) => {
+    if(err){
+        console.error(err)
+        return
+    }
+    console.log("file written successfully");
+});
+
+// TODO: Create a function to initialize app
+function init() {
     return inquirer.prompt([
         {
             type: 'input',
@@ -157,10 +172,9 @@ function writeToFile(fileName, TemplateData) {
             }
         }
     ])
-}
-
-// TODO: Create a function to initialize app
-function init() {}
+};
 
 // Function call to initialize app
-init();
+//init();
+
+//console.log(writeToFile());
