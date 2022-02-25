@@ -1,13 +1,15 @@
 
 // create readMe template
-const generatePage = (proTitle, proDes) => {
-    //const { } = TemplateData;
-    
+module.exports = templateData => {
+    const { proTitle, proDes, proIns, proUs, proLic, proCon, proTests, githubName, email/*,...license*/} = templateData;
+
     return `
-# ${proTitle}
+# ${templateData.proTitle}
+
+//{license}
 
 ## Description
-    ${proDes}
+    ${templateData.proDes}
 
 
 ## Table of Contents
@@ -21,33 +23,31 @@ const generatePage = (proTitle, proDes) => {
 ---
 
 ## Installation
-- proIns
+- ${templateData.proIns}
 
 
 ## Usage
-- proUs
+- ${templateData.proUs}
 
 
 ## License
-- proLic
+- ${templateData.proLic}
 
 
 ## Contributing
-- proCon}
+- ${templateData.proCon}
 
 
 ## Tests
-- proTests}
+- ${templateData.proTests}
 
 
 ## Questions
->githubName}
+>${templateData.githubName}
 >
->GitHub(https://github.com/githubName})
+>GitHub(https://github.com/${templateData.githubName})
 >
->Email me at email}(https://google.com) if you have any additional questions!
+>Email me at ${templateData.email}(https://google.com) if you have any additional questions!
 
-    `
+    `;
 }
-
-module.exports = generatePage;

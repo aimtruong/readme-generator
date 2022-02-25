@@ -2,6 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generatePage = require("./src/page-template.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
+
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -13,23 +15,9 @@ const questions = [
     "Write instructions on how to do a test (Required)"
 ];
 
-const profileDataArgs = process.argv.slice(2);
-
-const[ proTitle, proDes ] = profileDataArgs;
-
-const pageREADME = generatePage(proTitle, proDes);
-
-// TODO: Create a function to write README file
-fs.writeFile('README.md', pageREADME, (err) => {
-    if(err){
-        console.error(err)
-        return
-    }
-    console.log("file written successfully");
-});
 
 // TODO: Create a function to initialize app
-function init() {
+const init = () => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -116,6 +104,12 @@ function init() {
             }
         },
         {
+            type: 'confirm',
+            name: 'confirmLic',
+            message: "Does the project have a license? (Required)",
+            default: false
+        },
+        {
             type: 'list',
             name: 'proLic',
             message: "What license does the project have? (Required)",
@@ -133,12 +127,11 @@ function init() {
                     "Mozilla Public License 2.0",
                     "The Unlicense"
                 ],
-            validate: proLic => {
-                if(proLic){
+            when: ({ confirmLic }) => {
+                if(confirmLic){
                     return true;
                 }
                 else{
-                    console.log("Please enter the usage information for your project!");
                     return false;
                 }
             }
@@ -174,7 +167,41 @@ function init() {
     ])
 };
 
-// Function call to initialize app
-//init();
 
-//console.log(writeToFile());
+const writeFile = fileContent => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/README.md', fileContent, (err) => {
+            if(err){
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: "file written successfully"
+            });
+          });
+    });
+};
+
+
+// Function call to initialize app
+init()
+    //.then(license => {
+    //    return generateMarkdown(license);
+    //})
+    .then(templateData => {
+        const pageREADME = generatePage(templateData);
+        fs.writeFile("./README.md", pageREADME, err => {
+            if(err){
+                console.error(err);
+                return;
+            }
+            console.log("File created");
+        })
+    })
+    //.then(pageREADME => {
+      //  return writeFile(pageREADME);
+    //})
+    .catch(err => {
+        console.log(err);
+    });
