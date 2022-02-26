@@ -1,7 +1,7 @@
 
 // create readMe template
 module.exports = templateData => {
-    const { proTitle, proDes, proIns, proUs, proLic, proCon, proTests, githubName, email/*,...license*/} = templateData;
+    const { proTitle, desWhat, desWhy, proIns, proUs, proLic, proCon, proTests, fullName, githubName, email/*,...license*/} = templateData;
 
     return `
 # ${templateData.proTitle}
@@ -9,7 +9,8 @@ module.exports = templateData => {
 //{license}
 
 ## Description
-    ${templateData.proDes}
+    ${templateData.desWhat}
+    ${templateData.desWhy}
 
 
 ## Table of Contents
@@ -28,6 +29,10 @@ module.exports = templateData => {
 
 ## Usage
 - ${templateData.proUs}
+---
+> include screenshots here
+> create an 'assets/images' folder and drag image in this section
+---
 
 
 ## License
@@ -43,7 +48,7 @@ module.exports = templateData => {
 
 
 ## Questions
->${templateData.githubName}
+>${templateData.fullName}
 >
 >[GitHub](https://github.com/${templateData.githubName})
 >

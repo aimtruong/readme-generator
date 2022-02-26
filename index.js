@@ -8,17 +8,32 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 // TODO: Create an array of questions for user input
 const questions = [
     "What is the project name? (Required)",
-    "A description of the project (Required)",
-    "The instructions for installation (Required):",
-    "What are the usage information for the project? (Required)",
-    "What are the contribution guidelines? (Required)",
-    "Write instructions on how to do a test (Required)"
+    "What was your motivation for the project? (Required)",
+    "Why did you build this project? (Required)",
+    "What are the steps required to install your project? (Required):",
+    "How do you use your project (include examples)? (Required)",
+    "List any collaborators, third-party assets, or tutorials that should be mentioned (Required)",
+    "Explain how to run your tests (Required)"
 ];
 
 
 // TODO: Create a function to initialize app
 const init = () => {
     return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'fullName',
+            message: "What is your full name (Required): ",
+            validate: fullName => {
+                if(fullName){
+                    return true;
+                }
+                else{
+                    console.log("Please enter your full name!");
+                    return false;
+                }
+            }
+        },
         {
             type: 'input',
             name: 'githubName',
@@ -63,10 +78,24 @@ const init = () => {
         },
         {
             type: 'input',
-            name: 'proDes',
+            name: 'desWhat',
             message: questions[1],
-            validate: proDes => {
-                if(proDes){
+            validate: desWhat => {
+                if(desWhat){
+                    return true;
+                }
+                else{
+                    console.log("Please enter a description for your project!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'desWhy',
+            message: questions[2],
+            validate: desWhy => {
+                if(desWhy){
                     return true;
                 }
                 else{
@@ -78,7 +107,7 @@ const init = () => {
         {
             type: 'input',
             name: 'proIns',
-            message: questions[2],
+            message: questions[3],
             validate: proIns => {
                 if(proIns){
                     return true;
@@ -92,7 +121,7 @@ const init = () => {
         {
             type: 'input',
             name: 'proUs',
-            message: questions[3],
+            message: questions[4],
             validate: proUs => {
                 if(proUs){
                     return true;
@@ -139,7 +168,7 @@ const init = () => {
         {
             type: 'input',
             name: 'proCon',
-            message: questions[4],
+            message: questions[5],
             validate: proCon => {
                 if(proCon){
                     return true;
@@ -151,15 +180,20 @@ const init = () => {
             }
         },
         {
+            type: 'confirm',
+            name: 'confirmTest',
+            message: "Does the project have tests? (Required)",
+            default: true
+        },
+        {
             type: 'input',
             name: 'proTests',
-            message: questions[5],
-            validate: proTests => {
-                if(proTests){
+            message: questions[6],
+            when: ({ confirmTest }) => {
+                if(confirmTest){
                     return true;
                 }
                 else{
-                    console.log("Please enter testing instructions!");
                     return false;
                 }
             }
