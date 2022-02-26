@@ -170,7 +170,7 @@ const init = () => {
 
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/README.md', fileContent, (err) => {
+        fs.writeFile('dist/README.md', fileContent, (err) => {
             if(err){
                 reject(err);
                 return;
@@ -190,18 +190,11 @@ init()
     //    return generateMarkdown(license);
     //})
     .then(templateData => {
-        const pageREADME = generatePage(templateData);
-        fs.writeFile("./README.md", pageREADME, err => {
-            if(err){
-                console.error(err);
-                return;
-            }
-            console.log("File created");
-        })
+        return generatePage(templateData);
     })
-    //.then(pageREADME => {
-      //  return writeFile(pageREADME);
-    //})
+    .then(pageREADME => {
+        return writeFile(pageREADME);
+    })
     .catch(err => {
         console.log(err);
     });

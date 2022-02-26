@@ -45,9 +45,9 @@ module.exports = templateData => {
 ## Questions
 >${templateData.githubName}
 >
->GitHub(https://github.com/${templateData.githubName})
+>[GitHub](https://github.com/${templateData.githubName})
 >
->Email me at ${templateData.email}(https://google.com) if you have any additional questions!
+>Email me at ${templateData.email} if you have any additional questions!
 
     `;
 }
