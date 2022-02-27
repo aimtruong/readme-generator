@@ -12,6 +12,7 @@ module.exports = templateData => {
     ${templateData.desWhat}
     ${templateData.desWhy}
 
+---
 
 ## Table of Contents
 - [Installation](#installation)
@@ -30,7 +31,7 @@ module.exports = templateData => {
 ## Usage
 - ${templateData.proUs}
 ---
-> include screenshots here
+> include screenshots here,
 > create an 'assets/images' folder and drag image in this section
 ---
 
@@ -50,7 +51,7 @@ module.exports = templateData => {
 ## Questions
 >${templateData.fullName}
 >
->[GitHub](https://github.com/${templateData.githubName})
+>[My GitHub Profile](https://github.com/${templateData.githubName})
 >
 >Email me at ${templateData.email} if you have any additional questions!
 

@@ -1,12 +1,13 @@
 
-# readme-generator
+# readme0genera
 
 //{license}
 
 ## Description
-    make it quick to create a readme since they have so many sections to memorize everytime
-    some people don't know how to create a good readme file
+    to do it
+    to complete it
 
+---
 
 ## Table of Contents
 - [Installation](#installation)
@@ -19,33 +20,33 @@
 ---
 
 ## Installation
-- download file and use command line with "node index" in repo
+- do this to install
 
 
 ## Usage
-- answer questions about the project and it will generate a readme.md
+- examples
 ---
-> include screenshots here
+> include screenshots here,
 > create an 'assets/images' folder and drag image in this section
 ---
 
 
 ## License
-- undefined
+- GNU Lesser General Public License v2.1
 
 
 ## Contributing
-- inquirer, node, filesystem
+- collaborators
 
 
 ## Tests
-- n/a
+- undefined
 
 
 ## Questions
 >aimtruong
 >
->[GitHub](https://github.com/aimtruong@ucdavis.edu)
+>[My GitHub Profile](https://github.com/aimtruong)
 >
 >Email me at aimtruong@ucdavis.edu if you have any additional questions!
 

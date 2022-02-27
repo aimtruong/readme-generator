@@ -227,7 +227,9 @@ init()
         return generatePage(templateData);
     })
     .then(pageREADME => {
+        console.log("README.md created successfully, find it in the dist folder and edit to your standards.");
         return writeFile(pageREADME);
+        
     })
     .catch(err => {
         console.log(err);

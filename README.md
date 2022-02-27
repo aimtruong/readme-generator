@@ -1,10 +1,13 @@
-# readme-generator
+
+# Readme-generator
 
 //{license}
 
 ## Description
-    command line generator to create a readme file
+    AS A developer, I WANT a README generator
+    SO THAT I can quickly create a professional README for a new project
 
+---
 
 ## Table of Contents
 - [Installation](#installation)
@@ -17,11 +20,15 @@
 ---
 
 ## Installation
-- download readme-generator files from repo
+- Download the files from this GitHub repo and in the command line, type "node index.js" to start
 
 
 ## Usage
-- the project and its repo
+- To save time on making a README.md, you can use this generator
+---
+> include screenshots here,
+> create an 'assets/images' folder and drag image in this section
+---
 
 
 ## License
@@ -29,7 +36,7 @@
 
 
 ## Contributing
-- node, inquirer, filesystem
+- Inquirer, node, fileSystem
 
 
 ## Tests
@@ -37,9 +44,10 @@
 
 
 ## Questions
->aimtruong
+>Aimee Truong
 >
->[GitHub](https://github.com/aimtruong)
+>[My GitHub Profile](https://github.com/aimtruong)
 >
 >Email me at aimtruong@ucdavis.edu if you have any additional questions!
 
+    
