@@ -26,8 +26,9 @@
 ## Usage
 - To save time on making a README.md
 
+
 ## First Look
-![first-look.JPG](.\assets\images\first-look.JPG)
+![first-look](https://user-images.githubusercontent.com/95596045/155905113-1194a243-238a-46ed-9a1e-658c929a25d9.JPG)
 
 
 ## License
