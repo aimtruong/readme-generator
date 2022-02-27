@@ -1,7 +1,7 @@
 
 # Readme-generator
 
-//{license}
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 ## Description
     AS A developer, I WANT a README generator
@@ -20,19 +20,18 @@
 ---
 
 ## Installation
-- Download the files from this GitHub repo and in the command line, type "node index.js" to start
+- Clone this GitHub and in the command line, type "node index.js" to start creating a README.md
 
 
 ## Usage
-- To save time on making a README.md, you can use this generator
----
-> include screenshots here,
-> create an 'assets/images' folder and drag image in this section
----
+- To save time on making a README.md
+
+## First Look
+![first-look.JPG](.\assets\images\first-look.JPG)
 
 
 ## License
-- undefined
+- Licensed under The Unlicense
 
 
 ## Contributing
@@ -40,7 +39,7 @@
 
 
 ## Tests
-- n/a
+- N/A
 
 
 ## Questions

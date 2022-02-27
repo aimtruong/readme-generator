@@ -136,13 +136,14 @@ const init = () => {
             type: 'confirm',
             name: 'confirmLic',
             message: "Does the project have a license? (Required)",
-            default: false
+            default: true
         },
         {
             type: 'list',
             name: 'proLic',
             message: "What license does the project have? (Required)",
-            choices: ["Apache License 2.0",
+            choices: ["None",
+                    "Apache License 2.0",
                     "GNU General Public License v3.0",
                     "MIT License",
                     "BSD 2-Clause 'Simplified' License",
@@ -202,6 +203,7 @@ const init = () => {
 };
 
 
+// get page-template with answers and create it in the dist folder
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
         fs.writeFile('dist/README.md', fileContent, (err) => {
@@ -220,17 +222,21 @@ const writeFile = fileContent => {
 
 // Function call to initialize app
 init()
+    // get license info from prompt, then add badge and info
     //.then(license => {
     //    return generateMarkdown(license);
     //})
+    // get answers and turn into readme file
     .then(templateData => {
         return generatePage(templateData);
     })
+    // writeFile function happens
     .then(pageREADME => {
         console.log("README.md created successfully, find it in the dist folder and edit to your standards.");
         return writeFile(pageREADME);
         
     })
+    // if error, then displays where
     .catch(err => {
         console.log(err);
     });

@@ -1,11 +1,11 @@
 
-# readme0genera
+# Readme-generator
 
-//{license}
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 ## Description
-    to do it
-    to complete it
+    AS A developer, I WANT a README generator
+    SO THAT I can quickly create a professional README for a new project
 
 ---
 
@@ -20,11 +20,11 @@
 ---
 
 ## Installation
-- do this to install
+- Clone this GitHub and in the command line, type "node index.js" to start creating a README.md
 
 
 ## Usage
-- examples
+- To save time on making a README.md
 ---
 > include screenshots here,
 > create an 'assets/images' folder and drag image in this section
@@ -32,19 +32,19 @@
 
 
 ## License
-- GNU Lesser General Public License v2.1
+- Licensed under The Unlicense
 
 
 ## Contributing
-- collaborators
+- Inquirer, node, fileSystem
 
 
 ## Tests
-- undefined
+- N/A
 
 
 ## Questions
->aimtruong
+>Aimee Truong
 >
 >[My GitHub Profile](https://github.com/aimtruong)
 >
