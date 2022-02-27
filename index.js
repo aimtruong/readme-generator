@@ -2,7 +2,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generatePage = require("./src/page-template.js");
-const generateMarkdown = require("./utils/generateMarkdown.js");
 
 
 // TODO: Create an array of questions for user input
@@ -222,10 +221,6 @@ const writeFile = fileContent => {
 
 // Function call to initialize app
 init()
-    // get license info from prompt, then add badge and info
-    //.then(license => {
-    //    return generateMarkdown(license);
-    //})
     // get answers and turn into readme file
     .then(templateData => {
         return generatePage(templateData);
