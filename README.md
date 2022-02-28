@@ -30,6 +30,8 @@
 ## First Look
 ![first-look](https://user-images.githubusercontent.com/95596045/155905113-1194a243-238a-46ed-9a1e-658c929a25d9.JPG)
 
+## WalkThrough
+
 
 ## License
 - Licensed under The Unlicense
@@ -37,10 +39,6 @@
 
 ## Contributing
 - Inquirer, node, fileSystem
-
-
-## Tests
-- N/A
 
 
 ## Questions

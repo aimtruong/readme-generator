@@ -1,30 +1,25 @@
 
-# Readme-generator
+# Hobby Search
 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 ## Description
-    AS A developer, I WANT a README generator
-    SO THAT I can quickly create a professional README for a new project
+    AS A hobbyist, I WANT to get information and tutorials on a specific topic
+    SO THAT I can connect users with communities of shared interests
 
 ---
 
 ## Table of Contents
-- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 
 ---
 
-## Installation
-- Clone this GitHub and in the command line, type "node index.js" to start creating a README.md
-
 
 ## Usage
-- To save time on making a README.md
+- A search bar to type in hobbies, like sewing, cooking, and baking
 ---
 > include screenshots here,
 > create an 'assets/images' folder and drag image in this section
@@ -36,11 +31,8 @@
 
 
 ## Contributing
-- Inquirer, node, fileSystem
-
-
-## Tests
-- N/A
+- Collaborators: Charles Peace, Julie Pozdnyakov, Dillon Roth
+- Third-party assets: Materialize, Youtube API, and Wikipedia API
 
 
 ## Questions
