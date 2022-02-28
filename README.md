@@ -31,7 +31,7 @@
 ![first-look](https://user-images.githubusercontent.com/95596045/155905113-1194a243-238a-46ed-9a1e-658c929a25d9.JPG)
 
 ## WalkThrough
-
+[Click to open video](https://drive.google.com/file/d/12LNyABavmAMZE0kGNq4DgkVbqejrsMzd/view?usp=sharing)
 
 ## License
 - Licensed under The Unlicense
